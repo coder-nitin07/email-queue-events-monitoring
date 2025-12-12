@@ -4,9 +4,6 @@ const IORedis = require('ioredis');
 // redis connection
 const connection = new IORedis();
 
-// QueueScheduler for delayed jobs and retrics
-const emailQueueScheduler = new QueueScheduler('emailQueue', { connection });
-
 // initialize the queue
 const emailQueue = new Queue('emailQueue', {
     connection,
